@@ -28,7 +28,7 @@ Route::get('/', [HomeController::class, 'index']);
     Route::get('/user', [UserController::class, 'index']);
     Route::post('/user/store', [UserController::class, 'store']);
     Route::post('/user/update/{id}', [UserController::class, 'update']);
-    Route::get('/user/destroy', [UserController::class, 'destroy']);
+    Route::get('/user/destroy/{id}', [UserController::class, 'destroy']);
 
 //     //crud data jenis barang
     Route::get('/jenisbarang', [JenisBarangController::class, 'index']);
