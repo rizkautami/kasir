@@ -24,17 +24,17 @@ Route::get('/', [HomeController::class, 'index']);
 // Route::get('/logout', [AuthController::class, 'logout']);
 
 // Route::group(['middleware' => ['auth','checkRole:admin']], function(){
-//     //crud data user
+//crud data user
     Route::get('/user', [UserController::class, 'index']);
     Route::post('/user/store', [UserController::class, 'store']);
     Route::post('/user/update/{id}', [UserController::class, 'update']);
     Route::get('/user/destroy/{id}', [UserController::class, 'destroy']);
 
-//     //crud data jenis barang
+ //crud data jenis barang
     Route::get('/jenisbarang', [JenisBarangController::class, 'index']);
     Route::post('/jenisbarang/store', [JenisBarangController::class, 'store']);
-//     Route::post('/jenisbarang/update/{id}', [JenisBarangController::class, 'update']);
-//     Route::get('/jenisbarang/destroy', [JenisBarangController::class, 'destroy']);
+    Route::post('/jenisbarang/update/{id}', [JenisBarangController::class, 'update']);
+    Route::get('/jenisbarang/destroy/{id}', [JenisBarangController::class, 'destroy']);
 // });
 
 // Route::group(['middleware' => ['auth','checkRole:admin,kasir']], function(){

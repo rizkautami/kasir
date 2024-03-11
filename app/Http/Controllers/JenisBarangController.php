@@ -35,8 +35,8 @@ class JenisBarangController extends Controller
         return redirect('/jenisbarang')->with('success','Data Berhasil Diubah');
     }
 
-    public function destroy(){
-        $user = JenisBarang::where('id',$id)->delete();
+    public function destroy($id){
+        $jenisbarang = JenisBarang::where('id',$id)->delete();
         return redirect('/jenisbarang')->with('success','Data Berhasil Dihapus');
     }
 }

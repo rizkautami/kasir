@@ -17,8 +17,10 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">{{ $title }}</h4>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="modalCreate"><i class="fa fa-plus"></i>Tambah Data</button>
+                    <div class="row">
+                            <div class="col-6"><h4 class="card-title">{{ $title }}</h4></div>
+                            <div class="col-6 text-right"> <a href="#modalCreate" data-toggle="modal" class="btn btn-xs btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>    </div>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -67,7 +69,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Jenis Barang</label>
-                        <input type="text" class="form-control" name="name" placeholder="Nama Lengkap" required>
+                        <input type="text" class="form-control" name="nama_jenis" placeholder="Jenis Barang" required>
                     </div>
                    
                 </div>
@@ -93,8 +95,8 @@
             @csrf
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Nama Lengkap</label>
-                        <input type="text" value="{{ $d->name }}" class="form-control" name="name" placeholder="Nama Lengkap" required>
+                        <label>Jenis Barang</label>
+                        <input type="text" value="{{ $d->nama_jenis }}" class="form-control" name="nama_jenis" placeholder="Jenis Barang" required>
                     </div>
                     
                 </div>
@@ -109,7 +111,7 @@
 @endforeach
 
 @foreach($data_jenis as $c)
-<div class="modal fade" id="modalEdit{{$c->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="modalHapus{{$c->id}}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -117,7 +119,7 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
             </div>
-            <form method="GET" action="user/destroy/{{$c->id}}">
+            <form method="GET" action="jenisbarang/destroy/{{$c->id}}">
             @csrf
                 <div class="modal-body">
                     <div class="form-group">
