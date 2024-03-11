@@ -45,7 +45,8 @@
                     <b class="logo-abbr"><img src="/assets/images/logo.png" alt=""> </b>
                     <span class="logo-compact"><img src="/assets/images/logo-compact.png" alt=""></span>
                     <span class="brand-title">
-                        <img src="/assets/images/logo-text.png" alt="">
+                        <h3 style="color:white;">E-KASIR</h3>
+                        <!-- <img src="/assets/images/logo-text.png" alt=""> -->
                     </span>
                 </a>
             </div>
@@ -121,9 +122,9 @@
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Data Master</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Data User</a></li>
-                            <li><a href="#">Data Jenis Barang</a></li>
-                            <li><a href="#">Data Barang</a></li>
+                            <li><a href="/user">Data User</a></li>
+                            <li><a href="/jenisbarang">Data Jenis Barang</a></li>
+                            <li><a href="/barang">Data Barang</a></li>
                         </ul>
                     </li>
                     <li>
