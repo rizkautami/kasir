@@ -80,12 +80,12 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="icon-user"></i> <span>Profile</span></a>
+                                            <a href="/profile"><i class="icon-user"></i> <span>Profile</span></a>
                                         </li>
                             
                                         <hr class="my-2">
                                      
-                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                        <li><a href="/logout"><i class="icon-key"></i> <span>Logout</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                     
                     <li class="nav-label">UI Components</li>
                     <li>
-                        <a href="#" aria-expanded="false">
+                        <a href="/setdiskon" aria-expanded="false">
                             <i class="icon-badge menu-icon"></i><span class="nav-text">Setting Diskon</span>
                         </a>
                     </li>

@@ -6,7 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController; 
 use App\Http\Controllers\JenisBarangController;
-use App\Http\Controllers\BarangController;  
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\DiskonController;  
 
 /*
 |--------------------------------------------------------------------------
@@ -42,9 +43,19 @@ Route::get('/', [HomeController::class, 'index']);
     Route::post('/barang/store', [BarangController::class, 'store']);
     Route::post('/barang/update/{id}', [BarangController::class, 'update']);
     Route::get('/barang/destroy/{id}', [BarangController::class, 'destroy']);
+
+//crud data diskon
+    Route::get('/setdiskon', [DiskonController::class, 'index']);
+    Route::post('/setdiskon/update/{id}', [DiskonController::class, 'update']);
+
+
 // });
 
 // Route::group(['middleware' => ['auth','checkRole:admin,kasir']], function(){
 //     Route::get('/home', [HomeController::class, 'index']);
 //     
+
+        //setting profile
+    Route::get('/profile', [UserController::class, 'profile']);
+    Route::post('/profile/update/{id}', [UserController::class, 'updateprofile']);
 // });
