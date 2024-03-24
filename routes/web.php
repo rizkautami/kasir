@@ -7,7 +7,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController; 
 use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\BarangController;
-use App\Http\Controllers\DiskonController;  
+use App\Http\Controllers\DiskonController;
+use App\Http\Controllers\TransaksiController;  
 
 /*
 |--------------------------------------------------------------------------
@@ -55,7 +56,11 @@ Route::get('/', [HomeController::class, 'index']);
 //     Route::get('/home', [HomeController::class, 'index']);
 //     
 
-        //setting profile
+    //setting profile
     Route::get('/profile', [UserController::class, 'profile']);
     Route::post('/profile/update/{id}', [UserController::class, 'updateprofile']);
+
+    //Transaksi
+    Route::get('/transaksi', [TransaksiController::class, 'index']);
+    Route::get('/transaksi/create', [TransaksiController::class, 'create']);
 // });
